@@ -1,21 +1,22 @@
-# SCRA
+# SCRA Schema
 
-> Smart City Reference Architecture
+> Semantic Specification for the Smart City Reference Architecture (SCRA)
 
-SCRA is an open semantic specification supporting the Smart City Reference
-Architecture (SCRA).
+SCRA Schema provides the semantic specification for the Smart City Reference Architecture (SCRA).
 
-The project provides the canonical semantic foundation for interoperable
-smart cities, mobility systems, digital twins, and AI-ready information
-exchange.
+It defines the canonical semantic foundation for interoperable smart cities,
+mobility systems, digital twins, and AI-ready information exchange.
 
 Rather than defining implementation-specific APIs or software platforms,
-SCRA Schema defines common semantic concepts that enable heterogeneous
-systems to exchange information through shared meaning.
+SCRA Schema establishes common semantic concepts, vocabularies, and
+relationships that enable heterogeneous systems to exchange information
+through shared meaning.
 
-The specification is fully compatible with linked data principles and is
-designed to align with international standards such as NGSI-LD, RDF,
-JSON-LD, GTFS, GTFS-Realtime, and Transmodel.
+The specification is designed to align with linked data principles and
+international standards, including NGSI-LD, RDF, JSON-LD, GTFS,
+GTFS-Realtime, and Transmodel.
+
+---
 
 ## Scope
 
@@ -23,7 +24,7 @@ SCRA Schema defines canonical semantic concepts, vocabularies, and semantic
 relationships for interoperable smart-city information exchange.
 
 The specification focuses on semantic interoperability and does not define
-implementation-specific technologies.
+implementation-specific solutions.
 
 Specifically, SCRA Schema does not define:
 
@@ -51,7 +52,7 @@ SCRA Schema provides the semantic foundation of SCRA.
 Its objectives are:
 
 - Define canonical semantic models
-- Provide machine-readable vocabularies
+- Provide machine-readable semantic models and vocabularies
 - Support AI interoperability
 - Enable cross-domain semantic consistency
 - Promote long-term interoperability
@@ -74,9 +75,14 @@ applications.
 
 ---
 
-## Repository Structure
+## Documentation Structure
 
 The documentation is organised into several complementary sections.
+
+### Specifications
+
+Normative specification documents describing the architecture and semantic
+framework.
 
 ### Architecture Decision Records (ADR)
 
@@ -100,19 +106,19 @@ Reference examples demonstrating practical semantic modelling.
 
 SCRA Schema is under active development.
 
-The current work focuses on semantic modelling for public transport,
+The current work focuses on semantic models for public transport,
 real-time mobility information, and AI interoperability.
 
-Future releases will expand the semantic framework into additional
-smart-city domains.
+Future work will extend the semantic framework to additional smart-city
+domains.
 
 ---
 
 ## Repository
 
-GitHub Repository
+The source repository is available on GitHub.
 
-https://github.com/shwatch/scra-schema
+<https://github.com/shwatch/scra-schema>
 
 ---
 
