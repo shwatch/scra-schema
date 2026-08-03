@@ -1,0 +1,28 @@
+site_name: SCRA
+site_description: Semantic City Reference Architecture
+site_url: https://scra-schema.org/
+
+repo_name: shwatch/scra-schema
+repo_url: https://github.com/shwatch/scra-schema
+
+docs_dir: docs
+
+theme:
+  name: readthedocs
+  locale: en
+
+nav:
+  - Home: index.md
+  - Architecture Decision Records:
+      - Overview: decisions/index.md
+      - ADR-0001: decisions/0001-public-transport-route.md
+      - ADR-0002: decisions/0002-public-transport-locations.md
+      - ADR-0003: decisions/0003-service-journey.md
+      - ADR-0004: decisions/0004-realtime-vehicle-journeys.md
+      - ADR-0005: decisions/0005-physical-vehicle.md
+      - ADR-0006: decisions/0006-realtime-passing-times.md
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true

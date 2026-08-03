@@ -13,18 +13,18 @@ considered, and the reasoning behind each decision.
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| ADR-0001 | Semantic Foundation | Planned |
-| ADR-0002 | Canonical Entity Model | Planned |
-| ADR-0003 | NGSI-LD Mapping Strategy | Planned |
-| ADR-0004 | Public Transport Route Model | Draft |
-| ADR-0005 | Physical Vehicle Model | Draft |
-| ADR-0006 | Real-time Passing Time Semantic Model | Draft |
+| [ADR-0001](0001-public-transport-route.md) | Use `PublicTransportRoute` as the Semantic Route Entity Type | Accepted |
+| [ADR-0002](0002-public-transport-locations.md) | Represent Public Transport Locations Semantically | Accepted |
+| [ADR-0003](0003-service-journey.md) | Represent Scheduled Public Transport Operations as Service Journeys | Accepted |
+| [ADR-0004](0004-realtime-vehicle-journeys.md) | Model Real-Time Operations with Dated and Monitored Vehicle Journeys | Accepted |
+| [ADR-0005](0005-physical-vehicle.md) | Represent Vehicles as Physical Transport Entities | Accepted |
+| [ADR-0006](0006-realtime-passing-times.md) | Represent Real-Time Stop Events as Passing Times | Accepted |
 
 ---
 
 ## Purpose
 
-Architecture Decision Records are intended to provide:
+Architecture Decision Records provide:
 
 - architectural rationale
 - semantic consistency
