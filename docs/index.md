@@ -1,16 +1,35 @@
 # SCRA
 
-> Semantic City Reference Architecture
+> Smart City Reference Architecture
 
-SCRA is an open semantic specification for interoperable smart cities,
-mobility systems, digital twins, and AI-ready information exchange.
+SCRA is an open semantic specification supporting the Smart City Reference
+Architecture (SCRA).
 
-The project defines a common semantic foundation based on linked data
-principles, enabling heterogeneous urban systems to exchange information
-through shared meanings rather than source-specific data structures.
+The project provides the canonical semantic foundation for interoperable
+smart cities, mobility systems, digital twins, and AI-ready information
+exchange.
 
-SCRA is designed to be compatible with NGSI-LD while remaining independent
-of any specific implementation platform or software product.
+Rather than defining implementation-specific APIs or software platforms,
+SCRA Schema defines common semantic concepts that enable heterogeneous
+systems to exchange information through shared meaning.
+
+The specification is fully compatible with linked data principles and is
+designed to align with international standards such as NGSI-LD, RDF,
+JSON-LD, GTFS, GTFS-Realtime, and Transmodel.
+
+---
+
+## Purpose
+
+SCRA Schema provides the semantic foundation of SCRA.
+
+Its objectives are:
+
+- Define canonical semantic models
+- Provide machine-readable vocabularies
+- Support AI interoperability
+- Enable cross-domain semantic consistency
+- Promote long-term interoperability
 
 ---
 
@@ -18,70 +37,25 @@ of any specific implementation platform or software product.
 
 Modern cities operate through many independent information systems.
 
-Although these systems often describe the same real-world objects,
-they frequently use incompatible data models and proprietary interfaces.
+Although these systems frequently describe the same real-world entities,
+they often use incompatible data structures and proprietary interfaces.
 
-SCRA provides a common semantic layer that enables information to be shared,
-integrated, and interpreted consistently across domains.
+SCRA establishes a common semantic layer that allows information to be
+shared, integrated, and interpreted consistently across domains.
 
-The long-term objective is to establish an open semantic foundation that
-supports interoperability between public agencies, private operators,
-digital twins, mobility systems, and AI applications.
-
----
-
-## Design Principles
-
-SCRA is developed according to the following principles.
-
-### Semantic First
-
-The semantic meaning of information is defined before implementation.
-
-Source-specific structures are mapped into canonical semantic concepts rather
-than being reproduced directly.
-
-### Open Standards
-
-Existing international standards are reused whenever their semantics are
-compatible with the intended meaning.
-
-Examples include:
-
-- NGSI-LD
-- RDF
-- JSON-LD
-- GTFS
-- GTFS-Realtime
-- Transmodel
-
-### AI-Ready
-
-Semantic models should support both human understanding and machine reasoning.
-
-The specification is intended to serve as a common semantic foundation for
-AI agents as well as conventional information systems.
-
-### Extensible
-
-The core semantic model should remain stable while allowing domain-specific
-extensions without breaking interoperability.
+The long-term vision is an open semantic ecosystem supporting public
+agencies, private operators, digital twins, mobility services, and AI
+applications.
 
 ---
 
-## Documentation
+## Repository Structure
 
-The specification is organised into several complementary sections.
-
-### Specifications
-
-Normative documents describing the overall architecture and semantic
-framework.
+The documentation is organised into several complementary sections.
 
 ### Architecture Decision Records (ADR)
 
-Design decisions documenting why particular semantic approaches have been
-adopted.
+Design decisions explaining why particular semantic approaches were adopted.
 
 ### Semantic Models
 
@@ -89,23 +63,23 @@ Canonical definitions of entities, properties, and relationships.
 
 ### JSON-LD Contexts
 
-Machine-readable semantic vocabularies for linked data applications.
+Machine-readable linked-data vocabularies.
 
 ### Examples
 
-Illustrative examples demonstrating practical implementation patterns.
+Reference examples demonstrating practical semantic modelling.
 
 ---
 
 ## Current Status
 
-SCRA is currently under active development.
+SCRA Schema is under active development.
 
-The initial work focuses on semantic modelling for public transport,
+The current work focuses on semantic modelling for public transport,
 real-time mobility information, and AI interoperability.
 
-Future work will extend the semantic framework to additional smart-city
-domains.
+Future releases will expand the semantic framework into additional
+smart-city domains.
 
 ---
 
