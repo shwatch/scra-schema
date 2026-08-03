@@ -13,6 +13,33 @@ theme:
 
 nav:
   - Home: index.md
+
+  - Specifications:
+      - Semantic Modeling Principles: specifications/semantic-modeling-principles.md
+
+  - Semantic Models:
+      - Overview: models/index.md
+      - Planning:
+          - ServiceCalendar: models/ServiceCalendar.md
+          - DayType: models/DayType.md
+          - ServiceJourney: models/ServiceJourney.md
+          - JourneyPattern: models/JourneyPattern.md
+          - PointInJourneyPattern: models/PointInJourneyPattern.md
+      - Dated Operations:
+          - OperatingDay: models/OperatingDay.md
+          - DatedVehicleJourney: models/DatedVehicleJourney.md
+      - Realtime Operations:
+          - MonitoredVehicleJourney: models/MonitoredVehicleJourney.md
+          - PassingEvent (Draft): models/PassingEvent.md
+      - Physical:
+          - PhysicalVehicle: models/PhysicalVehicle.md
+
+  - Semantic Mappings:
+      - GTFS Static: mappings/gtfs-static.md
+      - GTFS-Realtime: mappings/gtfs-realtime.md
+      - NGSI-LD: mappings/ngsi-ld.md
+      - MCP: mappings/mcp.md
+
   - Architecture Decision Records:
       - Overview: decisions/index.md
       - ADR-0001: decisions/0001-public-transport-route.md
