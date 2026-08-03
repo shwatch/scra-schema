@@ -17,6 +17,31 @@ The specification is fully compatible with linked data principles and is
 designed to align with international standards such as NGSI-LD, RDF,
 JSON-LD, GTFS, GTFS-Realtime, and Transmodel.
 
+## Scope
+
+SCRA Schema defines canonical semantic concepts, vocabularies, and semantic
+relationships for interoperable smart-city information exchange.
+
+The specification focuses on semantic interoperability and does not define
+implementation-specific technologies.
+
+Specifically, SCRA Schema does not define:
+
+- Communication protocols
+- APIs
+- Software implementations
+- Broker architectures
+- Deployment models
+- Internal system designs
+
+Those concerns are intentionally delegated to implementation-specific
+architectures and standards.
+
+This separation allows the semantic foundation to remain stable while
+supporting multiple implementation technologies, including NGSI-LD,
+JSON-LD, RDF, Model Context Protocol (MCP), and future interoperability
+frameworks.
+
 ---
 
 ## Purpose
