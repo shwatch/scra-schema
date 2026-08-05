@@ -34,6 +34,24 @@ nav:
       - Physical:
           - PhysicalVehicle: models/PhysicalVehicle.md
 
+  - Vocabulary:
+      - Overview: vocab/index.md
+      - PassingEvent:
+          - PassingEvent: vocab/PassingEvent.md
+          - monitoredVehicleJourney: vocab/monitoredVehicleJourney.md
+          - stop: vocab/stop.md
+          - eventType: vocab/eventType.md
+          - scheduledTime: vocab/scheduledTime.md
+          - predictedTime: vocab/predictedTime.md
+          - observedTime: vocab/observedTime.md
+          - predictionConfidence: vocab/predictionConfidence.md
+          - observationTimestamp: vocab/observationTimestamp.md
+          - delay: vocab/delay.md
+          - minutesUntilArrival: vocab/minutesUntilArrival.md
+          - referenceTime: vocab/referenceTime.md
+
+  - JSON-LD Contexts:
+      - Mobility Context: contexts/mobility.jsonld
   - Semantic Mappings:
       - GTFS Static: mappings/gtfs-static.md
       - GTFS-Realtime: mappings/gtfs-realtime.md
