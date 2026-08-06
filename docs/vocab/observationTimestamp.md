@@ -1,8 +1,8 @@
-﻿# observationTimestamp
+# observationTimestamp
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 
@@ -24,8 +24,15 @@ ISO 8601 date-time
 
 ## Definition
 
-The time at which the operational information supporting the PassingEvent was
-observed or reported.
+The time at which the operational information supporting the PassingEvent
+was observed or reported by the source system.
 
-It is distinct from the scheduled, predicted, or observed event time itself,
-and from feed retrieval time.
+`observationTimestamp` shall represent the timestamp of the supporting
+observation or report and shall not be interpreted as the time at which the
+PassingEvent itself occurred.
+
+`observationTimestamp` shall be expressed as an ISO 8601 date-time that
+includes either a UTC offset or `Z`.
+
+It is distinct from `scheduledTime`, `predictedTime`, `observedTime`,
+`referenceTime`, feed retrieval time, publication time, and processing time.
