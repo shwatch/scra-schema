@@ -35,6 +35,11 @@ For a regularly scheduled service, identity normally depends on:
 - DatedVehicleJourney
 - Operating Day
 
+Where more than one monitored execution may correspond to the same
+DatedVehicleJourney on the same Operating Day, identity shall additionally
+include a start time, execution identifier, or another profile-defined
+discriminator.
+
 The assigned PhysicalVehicle is not part of the semantic identity.
 
 Real-time observations update the state of the MonitoredVehicleJourney but
@@ -75,7 +80,8 @@ A MonitoredVehicleJourney:
 
 - monitors one DatedVehicleJourney;
 - may currently be operated by one PhysicalVehicle;
-- produces PassingTime predictions;
+- may be referenced by zero or more `PassingEvent` entities representing
+  scheduled, predicted, or observed operational events;
 - may be associated with operational observations;
 - may reference one or more monitoring sources.
 
@@ -91,13 +97,62 @@ Typical properties include:
 - current bearing;
 - current speed;
 - occupancy information;
-- observed timestamp;
+- observation timestamp;
 - prediction timestamp;
 - current stop;
-- next stop;
-- predicted passing times.
+- next stop.
+
+Predicted, scheduled, and observed stop events are represented by associated
+`PassingEvent` entities rather than embedded predicted passing-time structures.
 
 These properties are informative examples rather than mandatory attributes.
+
+---
+
+## Conformance Requirements
+
+A conforming `MonitoredVehicleJourney` shall include:
+
+- a stable semantic identity for the monitored execution;
+- one relationship to the applicable `DatedVehicleJourney`;
+- the applicable Operating Day or another profile-defined service-date
+  discriminator.
+
+The following conditional requirements apply:
+
+- a `PhysicalVehicle` relationship shall be present only when a vehicle is
+  currently assigned and known;
+- a current geographical position shall include its applicable observation
+  time;
+- a current delay shall conform to the normative `delay` calculation rules and
+  shall have an applicable baseline time;
+- predicted, scheduled, or observed stop events shall be represented by
+  associated `PassingEvent` entities;
+- prediction confidence shall be used only for predicted operational values;
+- occupancy information shall identify its applicable observation time or
+  source context when required by the applicable profile.
+
+The following information is optional unless required by an applicable
+profile:
+
+- the currently assigned `PhysicalVehicle`;
+- current geographical position;
+- current bearing;
+- current speed;
+- current delay;
+- occupancy information;
+- current stop;
+- next stop;
+- observation timestamp;
+- prediction timestamp;
+- references to monitoring sources.
+
+A `MonitoredVehicleJourney` may be referenced by zero or more `PassingEvent`
+entities. Each associated `PassingEvent` shall reference exactly one
+`MonitoredVehicleJourney`.
+
+Updates to an associated `PassingEvent` shall not alter the identity of the
+`MonitoredVehicleJourney`.
 
 ---
 
