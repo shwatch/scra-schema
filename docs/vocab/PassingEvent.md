@@ -1,4 +1,4 @@
-﻿# PassingEvent
+# PassingEvent
 
 ## Status
 
@@ -40,6 +40,13 @@ journey, stop, and operational event identity remain unchanged.
 - `minutesUntilArrival`
 - `referenceTime`
 
+## Conformance
+
+Detailed normative conformance requirements, including required, conditional,
+and optional properties and identity constraints, are defined in the
+[PassingEvent semantic model](../models/PassingEvent.md).
+
+---
 ## Source Alignment
 
 - Transmodel Passing Time
