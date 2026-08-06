@@ -1,4 +1,4 @@
-﻿# SCRA Mobility Vocabulary
+# SCRA Mobility Vocabulary
 
 ## Status
 
@@ -51,5 +51,7 @@ meaning. An SCRA term is published when no suitable term exists, when existing
 terms conflict, or when a harmonized term is required for reliable
 interoperability.
 
-Terms in this initial set are published as Draft unless their semantic model
-is already Normative.
+Each vocabulary term declares its own publication status. A term marked
+`Normative` defines requirements for conforming implementations. A term marked
+`Draft` remains subject to change and shall not be treated as a stable
+interoperability contract.
