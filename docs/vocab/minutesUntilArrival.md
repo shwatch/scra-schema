@@ -62,3 +62,30 @@ reported as `0`.
 A value of `0` therefore indicates that the selected arrival time is less than
 one whole minute after `referenceTime`, is equal to `referenceTime`, or has
 already passed.
+
+## Accessibility Use
+
+`minutesUntilArrival` is intended primarily for general user-interface
+presentation and conversational summaries.
+
+`minutesUntilArrival` alone shall not be treated as sufficient for
+high-precision accessibility guidance or close-range arrival assistance.
+
+In particular, a value of `0` does not distinguish among an arrival expected
+in less than one whole minute, an arrival expected at `referenceTime`, and an
+arrival time that has already passed.
+
+A presentation profile intended to support blind or visually impaired users
+should provide progressively more precise arrival guidance as the vehicle
+approaches.
+
+General search results may present the remaining time in whole minutes.
+Close-range accessibility guidance should use seconds, a profile-defined
+equivalent precision, or staged spoken expressions such as "arriving soon".
+
+A spoken expression such as "arriving soon" shall not by itself assert that
+the event has occurred. An actual arrival or passed state shall require
+operational evidence consistent with the normative `observedTime` semantics.
+
+Where second-level guidance is calculated, the calculation shall use the same
+`selectedArrivalTime` and `referenceTime` used for `minutesUntilArrival`.
