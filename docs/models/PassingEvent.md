@@ -34,6 +34,10 @@ of the PassingEvent.
 
 They update the temporal properties of the same event.
 
+Where the same MonitoredVehicleJourney visits the same PublicTransportStop
+more than once, occurrence identity shall additionally include a stop
+sequence, PointInJourneyPattern, or another profile-defined discriminator.
+
 ---
 
 ## Motivation
@@ -91,16 +95,53 @@ The stop defines where the operational event occurs.
 
 Typical semantic properties include:
 
-- eventType
-- scheduledTime
-- predictedTime
-- observedTime
-- predictionConfidence
-- observationTimestamp
-- source
+- `eventType`
+- `scheduledTime`
+- `predictedTime`
+- `observedTime`
+- `predictionConfidence`
+- `observationTimestamp`
+- `delay`
+- `minutesUntilArrival`
+- `referenceTime`
 
-The semantic model intentionally does not prescribe implementation-specific
-property names or data structures.
+The normative SCRA vocabulary terms above define the compact property names
+used by conforming NGSI-LD representations.
+
+---
+
+## Conformance Requirements
+
+A conforming `PassingEvent` shall include:
+
+- one `monitoredVehicleJourney` Relationship;
+- one `stop` Relationship;
+- one `eventType` Property.
+
+A conforming `PassingEvent` shall include at least one of:
+
+- `scheduledTime`;
+- `predictedTime`;
+- `observedTime`.
+
+The following conditional requirements apply:
+
+- `minutesUntilArrival` shall be accompanied by `referenceTime`;
+- `predictionConfidence` shall be used only when a predicted operational value
+  such as `predictedTime` is present;
+- `delay` shall be accompanied by the operational and baseline time values
+  required by the normative `delay` calculation rules;
+- `observationTimestamp` shall describe the observation or report supporting
+  the operational information and shall not replace `observedTime`.
+
+The following properties are optional unless made mandatory by an applicable
+profile:
+
+- `predictionConfidence`;
+- `observationTimestamp`;
+- `delay`;
+- `minutesUntilArrival`;
+- `referenceTime`, except when required by `minutesUntilArrival`.
 
 ---
 
