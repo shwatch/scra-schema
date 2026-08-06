@@ -1,8 +1,8 @@
-﻿# monitoredVehicleJourney
+# monitoredVehicleJourney
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 

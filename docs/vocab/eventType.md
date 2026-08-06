@@ -1,8 +1,8 @@
-﻿# eventType
+# eventType
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 

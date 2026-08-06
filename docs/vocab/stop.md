@@ -1,8 +1,8 @@
-﻿# stop
+# stop
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 
