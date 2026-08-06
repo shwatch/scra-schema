@@ -1,8 +1,8 @@
-﻿# predictedTime
+# predictedTime
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 
@@ -26,5 +26,8 @@ ISO 8601 date-time
 
 The forecast time at which the PassingEvent is expected to occur, calculated
 from the latest available operational information.
+
+`predictedTime` shall be expressed as an ISO 8601 date-time that includes
+either a UTC offset or `Z`.
 
 The time at which the prediction was produced shall be represented separately.

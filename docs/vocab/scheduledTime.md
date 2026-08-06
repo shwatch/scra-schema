@@ -1,8 +1,8 @@
-﻿# scheduledTime
+# scheduledTime
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 
@@ -25,5 +25,8 @@ ISO 8601 date-time
 ## Definition
 
 The timetable or published schedule time associated with a PassingEvent.
+
+`scheduledTime` shall be expressed as an ISO 8601 date-time that includes
+either a UTC offset or `Z`.
 
 It is distinct from predicted, target, and observed operational times.

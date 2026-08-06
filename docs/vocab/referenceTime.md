@@ -1,8 +1,8 @@
-﻿# referenceTime
+# referenceTime
 
 ## Status
 
-Draft
+Normative
 
 ## IRI
 
@@ -27,5 +27,12 @@ ISO 8601 date-time
 The time used as the calculation basis for a derived temporal value such as
 `minutesUntilArrival`.
 
+A derived value that depends on time shall be interpreted together with the
+`referenceTime` used to calculate it.
+
+`referenceTime` and any event time used in the calculation shall be expressed
+on a common time axis using an ISO 8601 date-time that includes either a UTC
+offset or `Z`.
+
 It is distinct from source observation time, prediction-generation time,
-retrieval time, and the event time itself.
+retrieval time, publication time, and the event time itself.
