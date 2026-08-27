@@ -16,7 +16,7 @@ NGSI-LD Relationship
 
 ## Domain
 
-`PassingEvent`
+`PassingEvent`, `PointInJourneyPattern`
 
 ## Range
 

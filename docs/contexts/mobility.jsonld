@@ -19,6 +19,16 @@
     "PointInJourneyPattern": "scra:PointInJourneyPattern",
     "DatedVehicleJourney": "scra:DatedVehicleJourney",
     "ServiceCalendar": "scra:ServiceCalendar",
-    "DayType": "scra:DayType"
+    "DayType": "scra:DayType",
+    "MonitoredVehicleJourney": "scra:MonitoredVehicleJourney",
+    "OperatingDay": "scra:OperatingDay",
+    "PhysicalVehicle": "scra:PhysicalVehicle",
+    "assignedVehicle": "scra:assignedVehicle",
+    "datedVehicleJourney": "scra:datedVehicleJourney",
+    "dayType": "scra:dayType",
+    "journeyPattern": "scra:journeyPattern",
+    "operatingDay": "scra:operatingDay",
+    "route": "scra:route",
+    "serviceJourney": "scra:serviceJourney"
   }
 }

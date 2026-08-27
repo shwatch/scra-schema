@@ -1,4 +1,4 @@
-# DayType
+# OperatingDay
 
 ## Status
 
@@ -8,192 +8,213 @@ Normative
 
 ## Definition
 
-A DayType represents a logical classification of operating days that share
-the same transport-relevant characteristics.
+An OperatingDay represents one specific calendar date as an operational day
+for public transport service.
 
-A DayType is independent of any specific calendar date.
+It provides the dated operational context in which scheduled or exceptional
+transport service is interpreted.
 
-It may describe conditions such as:
-
-- day of week;
-- working day or non-working day;
-- school day or school holiday;
-- public holiday;
-- market day;
-- seasonal condition; or
-- another characteristic relevant to transport demand or operations.
-
-A DayType may combine multiple day-related properties.
+An OperatingDay is distinct from a DayType. A DayType classifies kinds of days,
+whereas an OperatingDay identifies one particular operational date.
 
 ---
 
 ## Identity
 
-The semantic identity of a DayType is established by the transport-relevant
-classification that it represents.
+The semantic identity of an OperatingDay is established by the operational
+calendar date within the applicable transport or service-calendar context.
 
-A DayType remains the same semantic instance when:
+An OperatingDay remains the same semantic instance when:
 
-- it is assigned to different OperatingDays;
-- the calendar period in which it is used changes;
-- additional OperatingDays are associated with it; or
-- the services using it are revised.
+- the set of services operating on that date changes;
+- additional or cancelled DatedVehicleJourneys are introduced;
+- a different DayType classification is assigned;
+- operational observations are received; or
+- real-time updates modify the state of journeys on that day.
 
-A change to the defining combination of day-related characteristics may
-result in a different DayType.
+A different operational calendar date represents a different OperatingDay.
 
-A particular calendar date does not determine the identity of a DayType.
-
-Implementation-specific identifiers are defined by the relevant mapping
-specification.
+Where more than one service-calendar scope exists for the same civil date, the
+applicable profile shall define the additional scope needed to disambiguate
+OperatingDay identity.
 
 ---
 
 ## Motivation
 
-Public transport services are commonly planned according to recurring types
-of day rather than separately for every calendar date.
+Public transport planning distinguishes recurring service patterns from the
+actual dated operation of those patterns.
 
-For example, the same service plan may apply to:
+A DayType describes a recurring logical classification such as weekday,
+Saturday, Sunday, holiday, or another transport-relevant category.
 
-- ordinary weekdays;
-- Saturdays;
-- Sundays and public holidays;
-- school days; or
-- special seasonal periods.
+An OperatingDay provides the concrete date to which such classifications and
+service-calendar rules are applied.
 
-Representing these recurring conditions as DayTypes allows service plans to
-remain independent of specific dates.
-
-The applicable DayType for a particular date is established through the
-ServiceCalendar and OperatingDay model.
+This distinction allows SCRA to represent dated journeys independently from
+their recurring timetable definitions.
 
 ---
 
 ## Characteristics
 
-A DayType:
+An OperatingDay:
 
-- represents a logical classification rather than a calendar date;
-- may combine multiple day-related properties;
-- may apply to multiple OperatingDays;
-- may be used by multiple service plans;
-- is independent of any one ServiceJourney;
-- is independent of real-time operational conditions; and
-- may be reused across different validity periods.
+- represents one specific operational date;
+- may be assigned one or more DayType classifications according to the
+  applicable calendar model;
+- exists within a ServiceCalendar or equivalent calendar-resolution context;
+- may contain or be referenced by multiple DatedVehicleJourneys;
+- is independent of the real-time state of those journeys; and
+- shall not be treated as equivalent to a recurring DayType.
 
 ---
 
 ## Relationships
 
-### Property of Day
+### DayType
 
-A DayType may be characterised by one or more properties of day.
+An OperatingDay may be associated with an applicable DayType.
 
-Each property describes a condition relevant to transport demand or
-operations, such as:
+The DayType describes the logical classification of the day; the OperatingDay
+identifies the actual operational date.
 
-- weekday;
-- public holiday;
-- school holiday;
-- market day; or
-- another locally relevant condition.
-
-The combination of such properties determines the meaning of the DayType.
-
----
-
-### OperatingDay
-
-A DayType may be assigned to one or more OperatingDays.
-
-An OperatingDay represents a particular operational day, whereas a DayType
-represents the logical classification applied to that day.
-
-The assignment of a DayType to an OperatingDay does not change the identity
-of either concept.
+Assigning or changing a DayType classification does not change the identity of
+the OperatingDay.
 
 ---
 
 ### ServiceCalendar
 
-A ServiceCalendar establishes the assignment of DayTypes to OperatingDays
-within a defined calendar context.
+An OperatingDay may be resolved within one ServiceCalendar.
 
-The DayType remains independent of the specific dates managed by the
-ServiceCalendar.
+The ServiceCalendar provides the recurring validity rules, exception dates, or
+other calendar semantics used to determine which service definitions apply to
+the OperatingDay.
+
+A ServiceCalendar is not itself an OperatingDay and shall not replace the dated
+identity of the operational date.
 
 ---
 
-### ServiceJourney
+### DatedVehicleJourney
 
-A ServiceJourney or another time-dependent service concept may be associated
-with one or more DayTypes.
+One OperatingDay may be referenced by zero or more DatedVehicleJourneys.
 
-This relationship indicates the kinds of operating day on which the planned
-service is intended to apply.
+Each DatedVehicleJourney represents a planned journey occurrence in the context
+of one specific OperatingDay.
 
-The concrete dated operation is represented separately by a
-DatedVehicleJourney.
+A DatedVehicleJourney may be added, cancelled, replaced, or otherwise altered
+without changing the identity of the OperatingDay.
 
 ---
 
 ## Typical Properties
 
-Typical semantic properties include:
+Typical semantic properties may include:
 
-- identifier
-- name
-- description
-- propertiesOfDay
-- validityCondition
+- calendarDate;
+- localDate;
+- serviceDate;
+- timezone;
+- calendarScope; and
+- source identifier.
 
-The presence of a typical property does not make it mandatory.
+These names are informative examples only unless separately defined by a
+normative SCRA vocabulary declaration or an applicable profile.
 
-This semantic model does not prescribe implementation-specific property
-names, value encodings, or data structures.
+---
+
+## Conformance Requirements
+
+A conforming OperatingDay representation shall:
+
+- identify one specific operational calendar date;
+- remain semantically distinct from DayType;
+- provide sufficient scope to disambiguate the date where multiple calendar
+  contexts are applicable; and
+- be usable as the dated operational context for DatedVehicleJourney.
+
+Where a ServiceCalendar is used to resolve service applicability, the mapping
+shall preserve the difference between:
+
+- recurring calendar rules;
+- calendar exceptions;
+- the resolved OperatingDay; and
+- the DatedVehicleJourneys operating on that day.
 
 ---
 
 ## Origin
 
-This semantic concept is adopted primarily from:
+The concept is harmonized with public-transport scheduling models that
+distinguish recurring day classifications from dated operational days.
 
-- Transmodel — `DAY TYPE`
-- Transmodel — `PROPERTY OF DAY`
-- Transmodel — `SERVICE CALENDAR`
-
-Transmodel defines a DayType as a logical type of day independent of a
-specific calendar date.
-
-A DayType may be characterised by a combination of properties that influence
-transport demand or operating conditions.
-
-SCRA Schema adopts this distinction without changing its fundamental
-meaning.
+SCRA uses OperatingDay as the canonical dated service-operation context.
 
 ---
 
 ## Mapping Guidance
 
-Typical mappings include:
+### GTFS Static
 
-| Source | Semantic Mapping |
-|--------|------------------|
-| Transmodel `DAY TYPE` | DayType |
-| Transmodel `PROPERTY OF DAY` | Characteristic of DayType |
-| GTFS `calendar.txt` weekday pattern | Possible source for a DayType |
-| GTFS `service_id` | Source identifier for a recurring service-date pattern |
+GTFS does not publish an explicit OperatingDay entity.
 
-A GTFS `service_id` shall not automatically be treated as equivalent to a
-DayType.
+An OperatingDay is resolved from a concrete service date together with the
+calendar semantics of the applicable GTFS service.
 
-Depending on the dataset, a `service_id` may identify a set of applicable
-dates produced from:
+For a GTFS service, the mapping shall evaluate the combined effect of:
 
-- a weekly pattern in `calendar.txt`;
-- exceptions in `calendar_dates.txt`; or
-- an explicit list of dates in `calendar_dates.txt`.
+- `calendar.txt`, where present, for recurring weekday validity;
+- `calendar_dates.txt` for added or removed service dates; and
+- the target `service_date` or equivalent concrete operational date.
 
-The mapping shall therefore interpret the combined calendar semantics before
-establishing correspondence with Day
+The resolved operational date may then be represented as an OperatingDay.
+
+A GTFS `service_id` shall not by itself be treated as an OperatingDay. It
+identifies a service-calendar pattern or service-date rule set rather than one
+specific operational date.
+
+Likewise, a DayType inferred from recurring weekday or holiday semantics shall
+not replace the OperatingDay.
+
+### GTFS-Realtime
+
+Where GTFS-Realtime identifies a dated journey using `start_date`,
+service-date context, or an equivalent dated discriminator, that information
+may contribute to resolution of the applicable OperatingDay.
+
+The mapping shall first resolve the dated operational context and then relate
+the corresponding DatedVehicleJourney to that OperatingDay.
+
+Real-time updates shall not change OperatingDay identity merely because journey
+status, delay, assignment, or prediction data changes.
+
+---
+
+## Mapping Summary
+
+| Source concept | SCRA semantic mapping |
+|---|---|
+| GTFS concrete service date | OperatingDay date basis |
+| GTFS `calendar.txt` | Recurring service-calendar validity |
+| GTFS `calendar_dates.txt` | Added/removed service-date exceptions |
+| GTFS `service_id` | Source identifier for calendar/service validity, not OperatingDay identity by itself |
+| GTFS-Realtime `start_date` or equivalent dated discriminator | Input to OperatingDay resolution |
+| SCRA DayType | Logical classification applicable to OperatingDay |
+| SCRA ServiceCalendar | Calendar context used to resolve OperatingDay |
+| SCRA DatedVehicleJourney | Planned journey occurrence on OperatingDay |
+
+---
+
+## See Also
+
+- DayType
+- ServiceCalendar
+- ServiceJourney
+- DatedVehicleJourney
+- MonitoredVehicleJourney
+
+---
+
+© SCRA Project

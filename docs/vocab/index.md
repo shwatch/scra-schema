@@ -70,3 +70,30 @@ Each vocabulary term declares its own publication status. A term marked
 `Normative` defines requirements for conforming implementations. A term marked
 `Draft` remains subject to change and shall not be treated as a stable
 interoperability contract.
+
+<!-- BEGIN READY11 NORMATIVE VOCABULARY -->
+## Normative Mobility Vocabulary — Phase 2 READY Set
+
+These terms were promoted only after Semantic Model and NGSI-LD mapping
+evidence classified them as ready for stable vocabulary publication.
+
+### Entity Types
+
+- [MonitoredVehicleJourney](MonitoredVehicleJourney-class.md)
+- [OperatingDay](OperatingDay.md)
+- [PhysicalVehicle](PhysicalVehicle.md)
+
+### Relationships
+
+- [`assignedVehicle`](assignedVehicle.md)
+- [`datedVehicleJourney`](datedVehicleJourney-relationship.md)
+- [`dayType`](dayType-relationship.md)
+- [`journeyPattern`](journeyPattern-relationship.md)
+- [`operatingDay`](operatingDay-relationship.md)
+- [`route`](route.md)
+- [`serviceJourney`](serviceJourney-relationship.md)
+- [`stop`](stop.md)
+
+The following relationships remain under semantic review and are intentionally
+not declared normative by this phase: `currentPoint`, `currentStop`, `operatedByVehicle`, `operator`, `serviceCalendar`.
+<!-- END READY11 NORMATIVE VOCABULARY -->
