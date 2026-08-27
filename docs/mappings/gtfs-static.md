@@ -526,4 +526,34 @@ A GTFS Static mapping conforms to this specification when it:
 
 ---
 
+<!-- SCRA-PHASE4-GTFS-AGENCY-ORGANISATION -->
+
+### Organisation and operator role normalization
+
+SCRA maps the organisational identity represented by GTFS `agency.txt` to the
+normative `Organisation` semantic class.
+
+The mapping SHALL preserve organisational identity separately from
+organisational role.
+
+A GTFS agency may act as:
+
+- service operator;
+- transport authority;
+- data publisher;
+- vehicle owner or manager; or
+- another organisational role supported by the source.
+
+The mapping SHALL NOT assume that every agency performs all such roles.
+
+Where the source semantics establish that an Organisation operates a
+ServiceJourney or PhysicalVehicle, the normative SCRA `operator` relationship
+may be used.
+
+`agency_id` remains a source identifier and SHALL be scoped by the applicable
+GTFS dataset, source, or authority namespace.
+
+The existence of an `agency_id` reference SHALL NOT by itself create an
+`operator` relationship unless the source semantics justify that role.
+
 © SCRA Project

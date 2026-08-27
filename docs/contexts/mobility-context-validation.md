@@ -82,3 +82,14 @@ are required to expand through the SCRA Mobility Context.
 
 `serviceCalendar` has normative range `ServiceCalendar`. DayType applicability
 is represented separately by `dayType`.
+
+<!-- SCRA-PHASE4-CONTEXT-VALIDATION -->
+
+## Phase 4 Organisation and operator Expansion
+
+| Compact term | Context mapping | Expanded IRI | Result |
+|---|---|---|---|
+| `Organisation` | `scra:Organisation` | `https://scra-schema.org/vocab/Organisation` | Pass |
+| `operator` | `scra:operator` | `https://scra-schema.org/vocab/operator` | Pass |
+
+The `operator` relationship has normative range `Organisation`.

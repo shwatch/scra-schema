@@ -94,7 +94,6 @@ evidence classified them as ready for stable vocabulary publication.
 - [`serviceJourney`](serviceJourney-relationship.md)
 - [`stop`](stop.md)
 
-The following relationship remains under semantic review and is intentionally not declared normative: `operator`.
 <!-- END READY11 NORMATIVE VOCABULARY -->
 
 <!-- SCRA-PHASE3-READY4 -->
@@ -111,5 +110,20 @@ Semantic Models and NGSI-LD mapping.
 - [operatedByVehicle](operatedByVehicle.md)
 - [serviceCalendar](serviceCalendar-relationship.md)
 
-`operator` remains under semantic review and is not part of the Phase 3 READY
-set.
+<!-- SCRA-PHASE4-OPERATOR -->
+
+## Normative Mobility Vocabulary — Phase 4 Organisation and Operator
+
+### Entity Types
+
+- [Organisation](Organisation.md)
+
+### Relationships
+
+- [operator](operator.md)
+
+The `operator` relationship has normative domain `PhysicalVehicle`,
+`ServiceJourney` and normative range `Organisation`.
+
+`DatedVehicleJourney` is intentionally excluded from the normative operator
+domain until its semantic model contains a dedicated operator definition.

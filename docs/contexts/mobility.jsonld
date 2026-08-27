@@ -33,6 +33,8 @@
     "currentPoint": "scra:currentPoint",
     "currentStop": "scra:currentStop",
     "operatedByVehicle": "scra:operatedByVehicle",
-    "serviceCalendar": "scra:serviceCalendar"
+    "serviceCalendar": "scra:serviceCalendar",
+    "Organisation": "scra:Organisation",
+    "operator": "scra:operator"
   }
 }

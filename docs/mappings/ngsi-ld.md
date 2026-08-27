@@ -353,6 +353,7 @@ specification.
 |---|---|---|
 | ServiceJourney | `route` | PublicTransportRoute |
 | ServiceJourney | `journeyPattern` | JourneyPattern |
+| ServiceJourney | `operator` | Organisation |
 | ServiceJourney | `serviceCalendar` | ServiceCalendar |
 | ServiceJourney | `dayType` | DayType |
 | JourneyPattern | `route` | PublicTransportRoute |
@@ -365,7 +366,7 @@ specification.
 | MonitoredVehicleJourney | `operatedByVehicle` | PhysicalVehicle |
 | MonitoredVehicleJourney | `currentPoint` | PointInJourneyPattern |
 | MonitoredVehicleJourney | `currentStop` | PublicTransportStop |
-| PhysicalVehicle | `operator` | Organisation or transport operator |
+| PhysicalVehicle | `operator` | Organisation |
 | PublicTransportStop | `parentStation` | TransportStation |
 | OperatingDay | `dayType` | DayType |
 | OperatingDay | `serviceCalendar` | ServiceCalendar |

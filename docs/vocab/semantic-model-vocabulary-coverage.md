@@ -37,7 +37,6 @@ resolved.
 | `currentPoint` | Relationship | NGSI-LD candidate / semantic review required | — | — | Review |
 | `currentStop` | Relationship | NGSI-LD candidate / semantic review required | — | — | Review |
 | `operatedByVehicle` | Relationship | NGSI-LD candidate / semantic review required | — | — | Review |
-| `operator` | Relationship | NGSI-LD candidate / semantic review required | — | — | Review |
 | `serviceCalendar` | Relationship | NGSI-LD candidate / semantic review required | — | — | Review |
 
 ## Conformance Note
@@ -61,3 +60,15 @@ expansion.
 
 `operator` remains REVIEW / design-decision-required until one canonical
 operator/organisation range class is selected.
+
+<!-- SCRA-PHASE4-COVERAGE -->
+
+## Phase 4 Organisation and operator
+
+| Semantic term | Kind | Domain | Range | Status | Semantic / mapping basis |
+|---|---|---|---|---|---|
+| `Organisation` | Entity Type | — | — | Normative | Role-neutral organisation semantic model |
+| `operator` | Relationship | `PhysicalVehicle`, `ServiceJourney` | `Organisation` | Normative | Semantic Models + NGSI-LD + GTFS agency role separation |
+
+`DatedVehicleJourney` remains outside the normative `operator` domain until a
+dedicated operator semantic definition is added to that model.

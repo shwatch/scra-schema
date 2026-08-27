@@ -52,3 +52,12 @@ This alias is required because the normative `ServiceCalendar` class and the
 normative `serviceCalendar` relationship differ only by case in their canonical
 IRI paths. The source declaration filenames are kept distinct for
 case-insensitive development filesystems.
+
+<!-- SCRA-PHASE4-IRI-DEREFERENCE -->
+
+## Phase 4 Organisation and operator Dereference
+
+| Term | Canonical IRI | Publication mechanism | Result |
+|---|---|---|---|
+| `Organisation` | `https://scra-schema.org/vocab/Organisation` | direct Markdown page `Organisation.md` | Pass |
+| `operator` | `https://scra-schema.org/vocab/operator` | direct Markdown page `operator.md` | Pass |
