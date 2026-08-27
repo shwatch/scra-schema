@@ -24,6 +24,12 @@ vocabulary IRIs.
 
 | Compact term | Context mapping | Expanded IRI | Result |
 |---|---|---|---|
+| `ServiceJourney` | `scra:ServiceJourney` | `https://scra-schema.org/vocab/ServiceJourney` | Pass |
+| `JourneyPattern` | `scra:JourneyPattern` | `https://scra-schema.org/vocab/JourneyPattern` | Pass |
+| `PointInJourneyPattern` | `scra:PointInJourneyPattern` | `https://scra-schema.org/vocab/PointInJourneyPattern` | Pass |
+| `DatedVehicleJourney` | `scra:DatedVehicleJourney` | `https://scra-schema.org/vocab/DatedVehicleJourney` | Pass |
+| `ServiceCalendar` | `scra:ServiceCalendar` | `https://scra-schema.org/vocab/ServiceCalendar` | Pass |
+| `DayType` | `scra:DayType` | `https://scra-schema.org/vocab/DayType` | Pass |
 | `PassingEvent` | `scra:PassingEvent` | `https://scra-schema.org/vocab/PassingEvent` | Pass |
 | `monitoredVehicleJourney` | `scra:monitoredVehicleJourney` | `https://scra-schema.org/vocab/monitoredVehicleJourney` | Pass |
 | `stop` | `scra:stop` | `https://scra-schema.org/vocab/stop` | Pass |

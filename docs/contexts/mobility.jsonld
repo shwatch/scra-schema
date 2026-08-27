@@ -2,12 +2,9 @@
   "@context": {
     "@version": 1.1,
     "scra": "https://scra-schema.org/vocab/",
-
     "PassingEvent": "scra:PassingEvent",
-
     "monitoredVehicleJourney": "scra:monitoredVehicleJourney",
     "stop": "scra:stop",
-
     "eventType": "scra:eventType",
     "scheduledTime": "scra:scheduledTime",
     "predictedTime": "scra:predictedTime",
@@ -16,6 +13,12 @@
     "observationTimestamp": "scra:observationTimestamp",
     "delay": "scra:delay",
     "minutesUntilArrival": "scra:minutesUntilArrival",
-    "referenceTime": "scra:referenceTime"
+    "referenceTime": "scra:referenceTime",
+    "ServiceJourney": "scra:ServiceJourney",
+    "JourneyPattern": "scra:JourneyPattern",
+    "PointInJourneyPattern": "scra:PointInJourneyPattern",
+    "DatedVehicleJourney": "scra:DatedVehicleJourney",
+    "ServiceCalendar": "scra:ServiceCalendar",
+    "DayType": "scra:DayType"
   }
 }

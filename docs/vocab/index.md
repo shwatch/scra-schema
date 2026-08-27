@@ -44,6 +44,21 @@ https://scra-schema.org/contexts/mobility.jsonld
 - [minutesUntilArrival](minutesUntilArrival.md)
 - [referenceTime](referenceTime.md)
 
+## Normative Core Public-Transport Classes
+
+The following semantic classes have stable, normative SCRA vocabulary IRIs.
+Their semantic definitions remain in the corresponding semantic-model
+documents.
+
+### Entity Types
+
+- [ServiceJourney](ServiceJourney.md)
+- [JourneyPattern](JourneyPattern.md)
+- [PointInJourneyPattern](PointInJourneyPattern.md)
+- [DatedVehicleJourney](DatedVehicleJourney.md)
+- [ServiceCalendar](ServiceCalendar.md)
+- [DayType](DayType.md)
+
 ## Vocabulary Policy
 
 SCRA reuses an existing international vocabulary term when it has compatible
