@@ -29,6 +29,10 @@
     "journeyPattern": "scra:journeyPattern",
     "operatingDay": "scra:operatingDay",
     "route": "scra:route",
-    "serviceJourney": "scra:serviceJourney"
+    "serviceJourney": "scra:serviceJourney",
+    "currentPoint": "scra:currentPoint",
+    "currentStop": "scra:currentStop",
+    "operatedByVehicle": "scra:operatedByVehicle",
+    "serviceCalendar": "scra:serviceCalendar"
   }
 }

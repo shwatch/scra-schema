@@ -196,4 +196,26 @@ Mappings are informative and shall not modify the semantic definition.
 
 ---
 
+<!-- SCRA-PHASE3-MONITORED-RELATIONSHIPS -->
+
+## Normative Realtime Relationships — Phase 3
+
+The following relationships are normative for `MonitoredVehicleJourney`.
+
+| Relationship | Range | Normative semantics |
+|---|---|---|
+| `currentPoint` | `PointInJourneyPattern` | Current or next logical point in the journey pattern used to express monitored progress. It SHALL NOT be used as a stop-identity shortcut. |
+| `currentStop` | `PublicTransportStop` | Current or next operational stop associated with monitored progress. It is distinct from `currentPoint`. |
+| `operatedByVehicle` | `PhysicalVehicle` | Physical vehicle currently operating the monitored journey. It is distinct from the planned or assigned `DatedVehicleJourney.assignedVehicle` relationship. |
+
+`currentPoint` expresses logical progress in the journey pattern.
+
+`currentStop` expresses the operational stop associated with that progress.
+A `PointInJourneyPattern` and a `PublicTransportStop` SHALL NOT be treated as
+interchangeable identifiers.
+
+`operatedByVehicle` records the vehicle observed as operating the monitored
+journey. It SHALL NOT be interpreted as equivalent to `assignedVehicle`,
+because assignment and observed operation are separate facts.
+
 © SCRA Project

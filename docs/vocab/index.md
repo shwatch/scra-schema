@@ -94,6 +94,22 @@ evidence classified them as ready for stable vocabulary publication.
 - [`serviceJourney`](serviceJourney-relationship.md)
 - [`stop`](stop.md)
 
-The following relationships remain under semantic review and are intentionally
-not declared normative by this phase: `currentPoint`, `currentStop`, `operatedByVehicle`, `operator`, `serviceCalendar`.
+The following relationship remains under semantic review and is intentionally not declared normative: `operator`.
 <!-- END READY11 NORMATIVE VOCABULARY -->
+
+<!-- SCRA-PHASE3-READY4 -->
+
+## Normative Mobility Vocabulary — Phase 3 READY Set
+
+The following relationships were promoted after cross-layer review of the
+Semantic Models and NGSI-LD mapping.
+
+### Relationships
+
+- [currentPoint](currentPoint.md)
+- [currentStop](currentStop.md)
+- [operatedByVehicle](operatedByVehicle.md)
+- [serviceCalendar](serviceCalendar-relationship.md)
+
+`operator` remains under semantic review and is not part of the Phase 3 READY
+set.

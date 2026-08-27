@@ -39,3 +39,16 @@ IRI paths.
 The redirect mechanism changes only the human-readable publication path.
 It does not change the canonical vocabulary IRI, JSON-LD compact-term mapping,
 or semantic meaning of the term.
+
+<!-- SCRA-PHASE3-SERVICECALENDAR-DEREFERENCE -->
+
+## Phase 3 serviceCalendar Dereference
+
+| Term | Canonical IRI | Publication mechanism | Result |
+|---|---|---|---|
+| `serviceCalendar` | `https://scra-schema.org/vocab/serviceCalendar` | static redirect → `serviceCalendar-relationship/` | Pass |
+
+This alias is required because the normative `ServiceCalendar` class and the
+normative `serviceCalendar` relationship differ only by case in their canonical
+IRI paths. The source declaration filenames are kept distinct for
+case-insensitive development filesystems.

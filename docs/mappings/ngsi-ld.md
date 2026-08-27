@@ -353,7 +353,8 @@ specification.
 |---|---|---|
 | ServiceJourney | `route` | PublicTransportRoute |
 | ServiceJourney | `journeyPattern` | JourneyPattern |
-| ServiceJourney | `serviceCalendar` or `dayType` | ServiceCalendar or DayType |
+| ServiceJourney | `serviceCalendar` | ServiceCalendar |
+| ServiceJourney | `dayType` | DayType |
 | JourneyPattern | `route` | PublicTransportRoute |
 | PointInJourneyPattern | `journeyPattern` | JourneyPattern |
 | PointInJourneyPattern | `stop` | PublicTransportStop |

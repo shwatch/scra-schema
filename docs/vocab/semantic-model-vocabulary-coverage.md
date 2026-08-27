@@ -47,3 +47,17 @@ canonical SCRA IRI for that semantic term. The semantic model remains the
 authority for class meaning and constraints; the vocabulary declaration
 provides the stable IRI, and the Mobility JSON-LD Context provides compact-term
 expansion.
+
+<!-- SCRA-PHASE3-READY4-COVERAGE -->
+
+## Phase 3 READY Relationships
+
+| Semantic term | Kind | Domain | Range | Status | Semantic / mapping basis |
+|---|---|---|---|---|---|
+| `currentPoint` | Relationship | `MonitoredVehicleJourney` | `PointInJourneyPattern` | Normative | Semantic Model + NGSI-LD mapping |
+| `currentStop` | Relationship | `MonitoredVehicleJourney` | `PublicTransportStop` | Normative | Semantic Model + NGSI-LD mapping |
+| `operatedByVehicle` | Relationship | `MonitoredVehicleJourney` | `PhysicalVehicle` | Normative | Semantic Model + NGSI-LD mapping |
+| `serviceCalendar` | Relationship | `ServiceJourney / OperatingDay` | `ServiceCalendar` | Normative | NGSI-LD range cleanup; DayType separated to `dayType` |
+
+`operator` remains REVIEW / design-decision-required until one canonical
+operator/organisation range class is selected.

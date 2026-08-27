@@ -68,3 +68,17 @@ are required to expand through the SCRA Mobility Context.
 | `serviceJourney` | `scra:serviceJourney` | `https://scra-schema.org/vocab/serviceJourney` | Pass |
 | `stop` | `scra:stop` | `https://scra-schema.org/vocab/stop` | Pass |
 <!-- END READY11 CONTEXT VALIDATION -->
+
+<!-- SCRA-PHASE3-READY4-VALIDATION -->
+
+## Phase 3 READY Relationship Expansion
+
+| Compact term | Context mapping | Expanded IRI | Result |
+|---|---|---|---|
+| `currentPoint` | `scra:currentPoint` | `https://scra-schema.org/vocab/currentPoint` | Pass |
+| `currentStop` | `scra:currentStop` | `https://scra-schema.org/vocab/currentStop` | Pass |
+| `operatedByVehicle` | `scra:operatedByVehicle` | `https://scra-schema.org/vocab/operatedByVehicle` | Pass |
+| `serviceCalendar` | `scra:serviceCalendar` | `https://scra-schema.org/vocab/serviceCalendar` | Pass |
+
+`serviceCalendar` has normative range `ServiceCalendar`. DayType applicability
+is represented separately by `dayType`.
